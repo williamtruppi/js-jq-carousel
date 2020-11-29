@@ -5,7 +5,7 @@ $(function () {
   
   console.log(leftButton, rightButton);
 
-  rightButton.click(function () { 
+  rightButton.click(function nextImage () { 
 
     
     if($(".last").hasClass("active")){
@@ -18,7 +18,7 @@ $(function () {
     
   });
 
-  leftButton.click(function () {
+  leftButton.click(function previousImage () {
 
     
     if($(".first").hasClass("active")){
@@ -27,6 +27,19 @@ $(function () {
     } else {
       $(".active").prev().addClass("active");
       $(".active").next().removeClass("active");
+    }
+    
+  });
+
+  $(document).keydown(function(e){
+    if (e.which == 37) { 
+       previousImage ();
+    }
+  });
+
+  $(document).keydown(function(e){
+    if (e.which == 39) { 
+       nextImage ();
     }
   });
 
