@@ -2,6 +2,7 @@ $(function () {
 
   var leftButton = $(".fa-angle-left");
   var rightButton = $(".fa-angle-right");
+  var littleCircle = $(".fa-circle");
   
   console.log(leftButton, rightButton);
 
@@ -55,6 +56,40 @@ $(function () {
       }
     }
     
+  });
+
+  //CLICCARE SUI PALLINI MOSTRA L'IMMAGINE CORRISPONDENTE
+
+  $(".fa-circle:nth-child(1)").click(function() {
+    if($("img").hasClass("active") && (littleCircle.hasClass("active"))){
+      $(".active").removeClass("active");
+      $("img:nth-child(1)").addClass("active");
+      $(".fa-circle:nth-child(1)").addClass("active");
+    }
+  });
+
+  $(".fa-circle:nth-child(2)").click(function() {
+    if($("img").hasClass("active") && (littleCircle.hasClass("active"))){
+      $(".active").removeClass("active");
+      $("img:nth-child(2)").addClass("active");
+      $(".fa-circle:nth-child(2)").addClass("active");
+    }
+  });
+
+  $(".fa-circle:nth-child(3)").click(function() {
+    if($("img").hasClass("active") && (littleCircle.hasClass("active"))){
+      $(".active").removeClass("active");
+      $("img:nth-child(3)").addClass("active");
+      $(".fa-circle:nth-child(3)").addClass("active");
+    }
+  });
+
+  $(".fa-circle:nth-child(4)").click(function() {
+    if($("img").hasClass("active") && (littleCircle.hasClass("active"))){
+      $(".active").removeClass("active");
+      $("img:nth-child(4)").addClass("active");
+      $(".fa-circle:nth-child(4)").addClass("active");
+    }
   });
 
 });
